@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const SearchBox = ({searchfield, searchChange}) => {
 	return(
 		<input 
@@ -12,5 +10,4 @@ const SearchBox = ({searchfield, searchChange}) => {
 		/>
 	)
 }
-
 export default SearchBox;
