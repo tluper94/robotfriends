@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Cardlist from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
-import './App.css'
-
+import './App.css';
 
 class App extends Component {
 
@@ -21,7 +20,7 @@ class App extends Component {
 		.then(users => this.setState({ robots: users}));
 	}
 
-	onSearchChange= (event) => {
+	onSearchChange = (event) => {
 		this.setState({searchfield: event.target.value})
 	}
 
@@ -33,7 +32,6 @@ class App extends Component {
 		return !robots.length ? 
 		<h1>Loading</h1> :
 		(
-
 			<div className='tc'>
 				<h1 className='f2'>RoboFriends</h1>
 				<SearchBox searchChange={this.onSearchChange}/>
@@ -41,10 +39,7 @@ class App extends Component {
 				<Cardlist robots={filteredRobots} />
 				</Scroll>
 			</div>
-
 		)
-
 	}
 }
-
 export default App;
